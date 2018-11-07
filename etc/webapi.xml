@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/magesuite/catalogRule" method="POST">
+        <service class="MageSuite\CatalogRuleRestApi\Api\CatalogRuleRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_CatalogRule::catalog" />
+        </resources>
+    </route>
+    <route url="/V1/magesuite/catalogRule/:ruleId" method="PUT">
+        <service class="MageSuite\CatalogRuleRestApi\Api\CatalogRuleRepositoryInterface" method="save" />
+        <resources>
+            <resource ref="Magento_CatalogRule::catalog" />
+        </resources>
+    </route>
+    <route url="/V1/magesuite/catalogRule/:ruleId" method="DELETE">
+        <service class="MageSuite\CatalogRuleRestApi\Api\CatalogRuleRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Magento_CatalogRule::catalog" />
+        </resources>
+    </route>
+    <route url="/V1/magesuite/catalogRule/:ruleId" method="GET">
+        <service class="MageSuite\CatalogRuleRestApi\Api\CatalogRuleRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="Magento_CatalogRule::catalog" />
+        </resources>
+    </route>
+</routes>
